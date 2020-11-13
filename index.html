@@ -60,21 +60,23 @@
       // </div>
           console.log(response)
           const $movie = $('<div>')
-          const $writer = $('<p>').text('Species: ' + response.species.name)
+          const $species = $('<p>').text('Species: ' + response.species.name)
           // const $rating = $('<p>').text('rated: ' + response.Rated)
           // const $released = $('<p>').text('Released: ' + response.Released)
           // const $plot = $('<p>').text('Plot: ' + response.Plot)
           const $poster = $('<img>').attr('src', response.sprites.front_default)
           const $sposter = $('<img>').attr('src', response.sprites.front_shiny)
+          const $official = $('<img>').attr('src', response.sprites.other.dream_world.front_default)
 
 
           $movie.append(
             // $rating,
             // $released,
             // $plot,
-            $writer,
+            $species,
             $poster,
-            $sposter
+            $sposter,
+            $official
             
           );
           $('#movies-view').prepend($movie);
