@@ -44,8 +44,8 @@
       // displayMovieInfo function re-renders the HTML to display the appropriate content
       function displayMovieInfo() {
 
-        var movie = $(this).attr("data-name");
-        var queryURL = "https://pokeapi.co/api/v2/pokemon/" + movie;
+        var name = $(this).attr("data-name");
+        var queryURL = "https://pokeapi.co/api/v2/pokemon/" + name.toLocaleLowerCase();
 
         // Creates AJAX call for the specific movie button being clicked
         $.ajax({
