@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Favorite Movies</title>
+  <title>Pokestuff</title>
   <style type="text/css">
     button,
     div,
@@ -67,7 +67,7 @@
           const $poster = $('<img>').attr('src', response.sprites.front_default)
           const $sposter = $('<img>').attr('src', response.sprites.front_shiny)
           const $official = $('<img>').attr('src', response.sprites.other.dream_world.front_default)
-
+        //   const $officials = $('<img>').attr('src', response.sprites.other.official,artwork.front_default)
 
           $movie.append(
             // $rating,
@@ -76,7 +76,8 @@
             $species,
             $poster,
             $sposter,
-            $official
+            $official,
+            // $officials
             
           );
           $('#movies-view').prepend($movie);
